@@ -1,0 +1,202 @@
+$secondary-color: #2b2b2b;
+$section-spacing-height: 4rem;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    // font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+    color: $secondary-color;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-parallax {
+    position: relative;
+    background-image: url('../images/parallax.jpeg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // box-shadow: inset 100px 100px 200px black;
+    color: white;
+    line-height: 5rem;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .header-content {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        h1 {
+            font-size: 4.8rem;
+        }
+
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+.active {
+    border: 3px solid $secondary-color;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.5rem;
+
+    a {
+        margin-right: 2.5rem;
+    }
+
+    p {
+        margin-right: 2.5rem;
+    }
+}
+
+#bio {
+    display: block;
+    width: 100%;
+    padding: $section-spacing-height 0;
+
+    .bio-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 5rem;
+        //grid-template-columns: 1fr;
+        line-height: 3rem;
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        img {
+            width: 100%;
+            min-width: 250px;
+            max-width: 300px;
+            border-radius: 50px;
+            border: 3px solid $secondary-color;
+        }
+    }
+
+}
+
+#internships {
+    display: block;
+    width: 100%;
+    background: rgba(231, 231, 231, 0.801);
+    padding: $section-spacing-height;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 3rem;
+    }
+
+    .internships-grid {
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // grid-column-gap: 3rem;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $section-spacing-height;
+
+        .internship-logo {
+            flex-basis: 45%;
+            //flex: 1;
+            //width: 10%;
+            background: white;
+            border-radius: 50px;
+        }
+
+        #optum-logo {
+            padding-bottom: 3%;
+
+            img {
+                display: block;
+                width: 100%;
+                margin: auto;
+            }
+        }
+
+        #starkey-logo {
+            padding-top: 3%;
+
+            img {
+                display: block;
+                width: 75%;
+                margin: auto;
+            }
+        }
+    }
+
+    #internship-description {
+        text-align: left;
+        line-height: 2rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 1rem;
+}
+
+footer {
+    display: block;
+    min-height: 20vh;
+    background: $secondary-color;
+    color: white;
+}

@@ -1,0 +1,206 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: white;
+  color: #2b2b2b;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.header-parallax {
+  position: relative;
+  background-image: url("../images/parallax.jpeg");
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  line-height: 5rem;
+}
+
+.header-parallax::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.header-parallax .header-content {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header-parallax .header-content h1 {
+  font-size: 4.8rem;
+}
+
+.header-parallax .header-content p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.active {
+  border: 3px solid #2b2b2b;
+}
+
+.icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.icon-container a {
+  margin-right: 2.5rem;
+}
+
+.icon-container p {
+  margin-right: 2.5rem;
+}
+
+#bio {
+  display: block;
+  width: 100%;
+  padding: 4rem 0;
+}
+
+#bio .bio-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  grid-column-gap: 5rem;
+  line-height: 3rem;
+}
+
+#bio .bio-grid h2 {
+  margin-bottom: 2rem;
+}
+
+#bio .bio-grid p {
+  text-align: left;
+}
+
+#bio .bio-grid img {
+  width: 100%;
+  min-width: 250px;
+  max-width: 300px;
+  border-radius: 50px;
+  border: 3px solid #2b2b2b;
+}
+
+#internships {
+  display: block;
+  width: 100%;
+  background: rgba(231, 231, 231, 0.801);
+  padding: 4rem;
+  text-align: center;
+}
+
+#internships h2 {
+  margin-bottom: 3rem;
+}
+
+#internships .internships-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+#internships .internships-grid .internship-logo {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  background: white;
+  border-radius: 50px;
+}
+
+#internships .internships-grid #optum-logo {
+  padding-bottom: 3%;
+}
+
+#internships .internships-grid #optum-logo img {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+#internships .internships-grid #starkey-logo {
+  padding-top: 3%;
+}
+
+#internships .internships-grid #starkey-logo img {
+  display: block;
+  width: 75%;
+  margin: auto;
+}
+
+#internships #internship-description {
+  text-align: left;
+  line-height: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 1rem;
+}
+
+footer {
+  display: block;
+  min-height: 20vh;
+  background: #2b2b2b;
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */
