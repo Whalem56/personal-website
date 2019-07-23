@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/8368de034a.js"></script>
+    <script src="./main.js" defer></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Will Richardson</title>
@@ -31,71 +32,154 @@
             <div class="bio-grid">
                 <img src="./images/author.jpg" alt="image of author">
                 <article>
-                    <h2>Hey, I'm Will</h2>
+                    <h2>Hey, I'm <span>Will</span>.</h2>
                     <p>
                         I recently graduated from the
                         University of
-                        Wisconsin - Madison in May 2019. I am a life long learner who loves programming and keeping up
-                        with technology. When I'm not
-                        working,
-                        I enjoy cooking, frisbee, live music, exercising, and playing Super Smash Bros!
+                        Wisconsin - Madison in May 2019. I am a lifelong learner who loves programming and keeping up
+                        with technology.
                     </p>
+                    <p>In my free time
+                        I enjoy cooking, skiing, live music, exercising, and playing Super Smash Bros!</p>
+                    <p>Contact me via email: &nbsp;<b>willrichardson56@gmail.com</b></p>
+                    <p>If you're interested, my <b>resume</b> is <a href="#">here</a>.</p>
                 </article>
             </div>
         </div>
     </section>
-    <section id="internships">
+    <section id="industry">
         <div class="container">
-            <h2>Experience in Industry</h2>
-            <div class="internships-grid">
-                <div id="optum-logo" class="internship-logo active">
+            <h2>Industry <span>Experience</span></h2>
+            <div class="industry-grid">
+                <div id="optum" class="industry-logo active">
                     <img src="./images/Optum(R)_4C.png" alt="optum logo">
                 </div>
-                <div id="starkey-logo" class="internship-logo">
+                <div id="starkey" class="industry-logo">
                     <img src="./images/starkey.svg" alt="starkey logo">
                 </div>
             </div>
-            <article id="internship-description">
-                <h3 id="position">Software Engineer Internship - Optum</h3>
-                <hr>
-                <p id="description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, accusantium esse quasi eos
-                    officiis,
-                    cumque corporis quas, reiciendis consequuntur necessitatibus deserunt similique. Laboriosam error
-                    rerum
-                    dolorem corrupti eos mollitia quia nihil nemo officiis optio impedit fugit quam veritatis
-                    dignissimos
-                    harum pariatur distinctio perspiciatis a repudiandae architecto, recusandae ducimus eius unde!
-                    Eligendi
-                    aliquam excepturi est vero illum in similique dolorem, neque, voluptatem laboriosam magni beatae vel
-                    explicabo quae praesentium nulla iure veniam laborum unde repellendus molestiae! Recusandae
-                    molestias
-                    numquam commodi veritatis eligendi voluptate delectus ab quasi culpa ea? Modi atque optio, quia et
-                    officia sint at distinctio eveniet facere! Perspiciatis saepe totam, possimus reiciendis nostrum
-                    corporis architecto corrupti impedit inventore eaque error asperiores blanditiis, dolorem, quo
-                    deserunt!
-                    Accusamus architecto aliquid blanditiis?
-                </p>
+            <article id="industry-description">
+                <div id="optum-description">
+                    <h3>Software Engineer Internship (Summer 2018) - <i>Optum</i></h3>
+                    <hr>
+                    <div>
+                        <p>
+                            Learned Agile workflow by working on a team of interns using CA Agile Central for task
+                            organization.
+                        </p>
+                        <p>Built two web apps that streamlined communication between analysts and software engineers.
+                        </p>
+                        <p>Developed the apps using full-stack web development technology, utilizing React.js,
+                            Materialize, Webpack, and Babel for the front end. The backend consisted of Java Spring Boot
+                            and a MySQL database.</p>
+                        <p>Worked with Gherkin, Cucumber, and Selenium to build automated tests.</p>
+                        <p>Helped setup a Jenkins pipeline, abiding by the principles of continuous integration,
+                            continuous testing, and continuous deployment (CI/CT/CD) practices. </p>
+                        <p>Dockerized production-level apps and deployed them to the OpenShift Container Application
+                            Platform.</p>
+                    </div>
+                </div>
+                <div id="starkey-description" class="hide">
+                    <h3>Software Engineer Internship (Summer 2017) - <i>Starkey Hearing Technologies</i></h3>
+                    <hr>
+                    <div>
+                        <p>Developed a piece of software that stored test meta data and documentation into a database
+                            using C# and the .NET Framework. </p>
+                        <p>Helped design a 10+ relational table schema in order to store the parsed meta data.</p>
+                        <p>Worked with another intern to build a full-stack web application to display and organize the
+                            information stored in the database. The frontend was built with Angular4, while the backend
+                            consisted of ASP.NET Core and Microsoft SQL Server.</p>
+                    </div>
+                </div>
             </article>
         </div>
     </section>
     <section id="projects">
-        <div class="container"></div>
-    </section>
-    <section id="academics">
         <div class="container">
-
+            <h2>Latest <span>Project</span></h2>
+            <div class="project-grid">
+                <div id="project-pictures">
+                    <a href="https://playlist-saver-web-app.herokuapp.com" target="_blank"><img
+                            src="./images/screencapture-playlist-saver-web-app-herokuapp-2019-07-22-16_03_18.png"
+                            alt="picture of playlist saver project"></a>
+                </div>
+                <div id="project-content">
+                    <h3>Playlist Saver for Spotify</h3>
+                    <hr>
+                    <p>I spend a lot of time on Spotify and worry about what I'd do if I somehow lost all of my
+                        playlists ...
+                        so
+                        I made a backup.
+                    </p>
+                    <p>This project is a web app deployed to Heroku that parses your playlists and their tracks,
+                        The resulting document is downloaded to your browser containing all of your hard work.</p>
+                    <p>It's live! Check it out <a href="https://playlist-saver-web-app.herokuapp.com"
+                            target="_blank">here</a>.</p>
+                    <h3>Technologies</h3>
+                    <hr>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>REST API</li>
+                        <li>OAuth2.0</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="studies">
+        <div class="container">
+            <h2>My <span>Studies</span></h2>
+            <div class="studies-grid">
+                <div id="studies-content">
+                    <ul>
+                        <li>
+                            <span>University:&nbsp;</span> University of Wisconsin - Madison
+                        </li>
+                        <li>
+                            <span>Major:&nbsp;</span> Computer Science
+                        </li>
+                        <li>
+                            <span>Minor:&nbsp;</span> Math
+                        </li>
+                        <li>
+                            <span>GPA:&nbsp;</span> 3.61
+                        </li>
+                        <li>
+                            <span>Clubs:&nbsp;</span> Smash Bros Club, Intramural Volleyball, Undergraduate Project Lab
+                        </li>
+                        <li>
+                            <span>Relevant Coursework (CS):&nbsp;</span>Theory of Programming Languages, Computer
+                            Networks,
+                            Operating
+                            Systems, Algorithms, Artificial Intelligence, Computer Graphics, Machine Organization and
+                            Programming, Learning Modern C++, Data Structures
+                        </li>
+                        <li>
+                            <span>Relevant Coursework (Math):&nbsp;</span> Theory of Probability, Mathematical
+                            Statistics, Cryptography, Discrete Math, Elementary Matrix and Linear Algebra,
+                            Multi-Variable Calculus
+                        </li>
+                    </ul>
+                </div>
+                <div id="studies-picture">
+                    <img src="./images/graduation.jpg" alt="graduation picture of author">
+                </div>
+            </div>
         </div>
     </section>
     <footer>
-
-        <div class="icon-container">
-            <p>&copy; Will Richardson 2019
+        <div id="footer-content">
+            <div class="icon-container">
+                <a href="https://github.com/Whalem56" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/will-richardson/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/will.richardson.1420" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/Willseph96" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p><small>Made by Will Richardson &copy; 2019</small>
             </p>
-            <a href="https://github.com/Whalem56" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/will-richardson/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.facebook.com/will.richardson.1420" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/Willseph96" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
 </body>

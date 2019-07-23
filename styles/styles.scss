@@ -1,4 +1,6 @@
-$secondary-color: #2b2b2b;
+$primary-color: #2b2b2b;
+$secondary-color: #ebebeb;
+$tertiary-color: #42b9c2;
 $section-spacing-height: 4rem;
 
 * {
@@ -10,9 +12,10 @@ body {
     // font-family: Arial, Helvetica, sans-serif;
     font-family: 'Montserrat', sans-serif;
     background: white;
-    color: $secondary-color;
+    color: $primary-color;
     overflow: scroll;
     overflow-x: hidden;
+    text-align: center;
 }
 
 h1,
@@ -27,6 +30,20 @@ h6 {
 a {
     text-decoration: none;
     color: white;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-family: 'Courier New', Courier, monospace;
+
+    span {
+        color: $tertiary-color;
+    }
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
 }
 
 .header-parallax {
@@ -58,7 +75,6 @@ a {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        text-align: center;
 
         h1 {
             font-size: 4.8rem;
@@ -75,22 +91,33 @@ a {
 .container {
     width: 70%;
     margin: auto;
-    text-align: center;
 }
 
 .active {
-    border: 3px solid $secondary-color;
+    border: 3px solid $primary-color;
+}
+
+.hide {
+    display: none;
 }
 
 .icon-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     font-size: 2.5rem;
 
     a {
         margin-right: 2.5rem;
+
+        i.fab {
+            transition: color 0.2s;
+
+            &:hover {
+                color: $tertiary-color;
+            }
+        }
+
     }
 
     p {
@@ -98,20 +125,28 @@ a {
     }
 }
 
-#bio {
+section#bio {
     display: block;
     width: 100%;
     padding: $section-spacing-height 0;
 
     .bio-grid {
         display: grid;
+        justify-items: center;
         grid-template-columns: 1fr 2fr;
-        grid-column-gap: 5rem;
         //grid-template-columns: 1fr;
-        line-height: 3rem;
+        grid-column-gap: 5rem;
+        line-height: 2.5rem;
+
+        a {
+            font-weight: bold;
+            color: $tertiary-color;
+            text-decoration: underline;
+        }
 
         h2 {
             margin-bottom: 2rem;
+            color: $primary-color;
         }
 
         p {
@@ -123,40 +158,42 @@ a {
             min-width: 250px;
             max-width: 300px;
             border-radius: 50px;
-            border: 3px solid $secondary-color;
+            border: 3px solid $primary-color;
         }
     }
 
 }
 
-#internships {
+section#industry {
     display: block;
     width: 100%;
     background: rgba(231, 231, 231, 0.801);
-    padding: $section-spacing-height;
-    text-align: center;
+    padding: $section-spacing-height 0;
 
     h2 {
         margin-bottom: 3rem;
     }
 
-    .internships-grid {
-        // display: grid;
-        // grid-template-columns: 1fr 1fr;
-        // grid-column-gap: 3rem;
+    .industry-grid {
         display: flex;
-        justify-content: space-between;
+        //flex-wrap: wrap;
+        justify-content: space-around;
         margin-bottom: $section-spacing-height;
 
-        .internship-logo {
+        .industry-logo {
+            // flex: 0 1 100%;
+            // width: 100%;
             flex-basis: 45%;
-            //flex: 1;
-            //width: 10%;
             background: white;
             border-radius: 50px;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+            }
         }
 
-        #optum-logo {
+        #optum {
             padding-bottom: 3%;
 
             img {
@@ -166,7 +203,7 @@ a {
             }
         }
 
-        #starkey-logo {
+        #starkey {
             padding-top: 3%;
 
             img {
@@ -177,26 +214,218 @@ a {
         }
     }
 
-    #internship-description {
+    #industry-description {
         text-align: left;
         line-height: 2rem;
     }
 }
 
-h2 {
-    font-size: 2rem;
-    font-family: 'Courier New', Courier, monospace;
+section#projects {
+    display: block;
+    width: 100%;
+    background: white;
+    padding: $section-spacing-height 0;
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        width: 90%;
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-column-gap: 5rem;
+
+
+            #project-pictures {
+                img {
+                    &:hover {
+                        box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+                    }
+
+                    width: 100%;
+                    min-width: 250px;
+                    max-width: 400px;
+                    border: 3px solid $primary-color;
+
+                }
+            }
+
+            #project-content {
+                text-align: left;
+                line-height: 2rem;
+
+                a {
+                    font-weight: bold;
+                    color: $tertiary-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
 
-h3 {
-    font-size: 1.5rem;
-    font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 1rem;
+section#studies {
+    display: block;
+    width: 100%;
+    background: $secondary-color;
+    padding: $section-spacing-height 0;
+
+    h2 {
+        margin-bottom: 3rem;
+    }
+
+    .studies-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: 5rem;
+
+        #studies-content {
+            text-align: left;
+            line-height: 2rem;
+
+            span {
+                font-weight: bold;
+                color: $tertiary-color;
+            }
+        }
+
+        #studies-picture {
+            img {
+                width: 100%;
+                min-width: 250px;
+                max-width: 300px;
+                border-radius: 50px;
+                border: 3px solid $primary-color;
+            }
+        }
+    }
 }
 
 footer {
     display: block;
+    position: relative;
     min-height: 20vh;
-    background: $secondary-color;
+    background: $primary-color;
     color: white;
+
+    #footer-content {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        .icon-container {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    section#industry .industry-grid .industry-logo {
+        flex-basis: 30%;
+    }
+}
+
+@media (max-width: 970px) {
+
+    section#bio {
+        padding: 2rem 0;
+    }
+
+    section#industry {
+        padding: 2rem 0;
+    }
+
+    section#projects {
+        padding: 2rem 0;
+
+        .container {
+            width: 70%;
+        }
+    }
+
+    section#studies {
+        padding: 2rem 0;
+    }
+
+    .icon-container {
+        font-size: 2rem;
+    }
+
+    .header-parallax {
+        .header-content {
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+        }
+    }
+
+    section#bio .bio-grid {
+        grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
+    }
+
+    section#projects .container .project-grid {
+        grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
+
+        #project-content h3 {
+            text-align: center;
+        }
+    }
+
+    section#studies {
+        .studies-grid {
+            grid-template-columns: 1fr;
+            grid-row-gap: 3rem;
+        }
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+    }
+
+}
+
+@media (max-width: 411px) {
+    .icon-container {
+        font-size: 2rem;
+    }
+
+    .header-parallax {
+        .header-content {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+                line-height: 2rem;
+            }
+        }
+    }
+
+    section#bio .bio-grid {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
+
+    section#projects .container .project-grid {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
+
+    section#studies .studies-grid {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
 }

@@ -10,6 +10,7 @@ body {
   color: #2b2b2b;
   overflow: scroll;
   overflow-x: hidden;
+  text-align: center;
 }
 
 h1,
@@ -24,6 +25,20 @@ h6 {
 a {
   text-decoration: none;
   color: white;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h2 span {
+  color: #42b9c2;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
 .header-parallax {
@@ -56,7 +71,6 @@ a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  text-align: center;
 }
 
 .header-parallax .header-content h1 {
@@ -72,11 +86,14 @@ a {
 .container {
   width: 70%;
   margin: auto;
-  text-align: center;
 }
 
 .active {
   border: 3px solid #2b2b2b;
+}
+
+.hide {
+  display: none;
 }
 
 .icon-container {
@@ -89,7 +106,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
   font-size: 2.5rem;
 }
 
@@ -97,34 +113,51 @@ a {
   margin-right: 2.5rem;
 }
 
+.icon-container a i.fab {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.icon-container a i.fab:hover {
+  color: #42b9c2;
+}
+
 .icon-container p {
   margin-right: 2.5rem;
 }
 
-#bio {
+section#bio {
   display: block;
   width: 100%;
   padding: 4rem 0;
 }
 
-#bio .bio-grid {
+section#bio .bio-grid {
   display: -ms-grid;
   display: grid;
+  justify-items: center;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
   grid-column-gap: 5rem;
-  line-height: 3rem;
+  line-height: 2.5rem;
 }
 
-#bio .bio-grid h2 {
+section#bio .bio-grid a {
+  font-weight: bold;
+  color: #42b9c2;
+  text-decoration: underline;
+}
+
+section#bio .bio-grid h2 {
   margin-bottom: 2rem;
+  color: #2b2b2b;
 }
 
-#bio .bio-grid p {
+section#bio .bio-grid p {
   text-align: left;
 }
 
-#bio .bio-grid img {
+section#bio .bio-grid img {
   width: 100%;
   min-width: 250px;
   max-width: 300px;
@@ -132,75 +165,249 @@ a {
   border: 3px solid #2b2b2b;
 }
 
-#internships {
+section#industry {
   display: block;
   width: 100%;
   background: rgba(231, 231, 231, 0.801);
-  padding: 4rem;
-  text-align: center;
+  padding: 4rem 0;
 }
 
-#internships h2 {
+section#industry h2 {
   margin-bottom: 3rem;
 }
 
-#internships .internships-grid {
+section#industry .industry-grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-bottom: 4rem;
 }
 
-#internships .internships-grid .internship-logo {
+section#industry .industry-grid .industry-logo {
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
   background: white;
   border-radius: 50px;
+  cursor: pointer;
 }
 
-#internships .internships-grid #optum-logo {
+section#industry .industry-grid .industry-logo:hover {
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+section#industry .industry-grid #optum {
   padding-bottom: 3%;
 }
 
-#internships .internships-grid #optum-logo img {
+section#industry .industry-grid #optum img {
   display: block;
   width: 100%;
   margin: auto;
 }
 
-#internships .internships-grid #starkey-logo {
+section#industry .industry-grid #starkey {
   padding-top: 3%;
 }
 
-#internships .internships-grid #starkey-logo img {
+section#industry .industry-grid #starkey img {
   display: block;
   width: 75%;
   margin: auto;
 }
 
-#internships #internship-description {
+section#industry #industry-description {
   text-align: left;
   line-height: 2rem;
 }
 
-h2 {
-  font-size: 2rem;
-  font-family: 'Courier New', Courier, monospace;
+section#projects {
+  display: block;
+  width: 100%;
+  background: white;
+  padding: 4rem 0;
 }
 
-h3 {
-  font-size: 1.5rem;
-  font-family: 'Courier New', Courier, monospace;
-  margin-bottom: 1rem;
+section#projects h2 {
+  margin-bottom: 2rem;
+}
+
+section#projects .container {
+  width: 90%;
+}
+
+section#projects .container .project-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  grid-column-gap: 5rem;
+}
+
+section#projects .container .project-grid #project-pictures img {
+  width: 100%;
+  min-width: 250px;
+  max-width: 400px;
+  border: 3px solid #2b2b2b;
+}
+
+section#projects .container .project-grid #project-pictures img:hover {
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+section#projects .container .project-grid #project-content {
+  text-align: left;
+  line-height: 2rem;
+}
+
+section#projects .container .project-grid #project-content a {
+  font-weight: bold;
+  color: #42b9c2;
+  text-decoration: underline;
+}
+
+section#studies {
+  display: block;
+  width: 100%;
+  background: #ebebeb;
+  padding: 4rem 0;
+}
+
+section#studies h2 {
+  margin-bottom: 3rem;
+}
+
+section#studies .studies-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  grid-column-gap: 5rem;
+}
+
+section#studies .studies-grid #studies-content {
+  text-align: left;
+  line-height: 2rem;
+}
+
+section#studies .studies-grid #studies-content span {
+  font-weight: bold;
+  color: #42b9c2;
+}
+
+section#studies .studies-grid #studies-picture img {
+  width: 100%;
+  min-width: 250px;
+  max-width: 300px;
+  border-radius: 50px;
+  border: 3px solid #2b2b2b;
 }
 
 footer {
   display: block;
+  position: relative;
   min-height: 20vh;
   background: #2b2b2b;
   color: white;
+}
+
+footer #footer-content {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+footer #footer-content .icon-container {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  section#industry .industry-grid .industry-logo {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+}
+
+@media (max-width: 970px) {
+  section#bio {
+    padding: 2rem 0;
+  }
+  section#industry {
+    padding: 2rem 0;
+  }
+  section#projects {
+    padding: 2rem 0;
+  }
+  section#projects .container {
+    width: 70%;
+  }
+  section#studies {
+    padding: 2rem 0;
+  }
+  .icon-container {
+    font-size: 2rem;
+  }
+  .header-parallax .header-content h1 {
+    font-size: 3rem;
+  }
+  .header-parallax .header-content p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  section#bio .bio-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-row-gap: 3rem;
+  }
+  section#projects .container .project-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-row-gap: 3rem;
+  }
+  section#projects .container .project-grid #project-content h3 {
+    text-align: center;
+  }
+  section#studies .studies-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-row-gap: 3rem;
+  }
+  section#studies h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 411px) {
+  .icon-container {
+    font-size: 2rem;
+  }
+  .header-parallax .header-content h1 {
+    font-size: 2.5rem;
+  }
+  .header-parallax .header-content p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  section#bio .bio-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+  }
+  section#projects .container .project-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+  }
+  section#studies .studies-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
