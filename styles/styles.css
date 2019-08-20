@@ -305,6 +305,12 @@ section#studies .studies-grid #studies-content span {
   color: #42b9c2;
 }
 
+section#studies .studies-grid #studies-picture {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 section#studies .studies-grid #studies-picture img {
   width: 100%;
   min-width: 250px;
