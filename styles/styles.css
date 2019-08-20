@@ -28,7 +28,8 @@ a {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  line-height: 1.2em;
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -129,7 +130,6 @@ h3 {
 section#bio {
   display: block;
   width: 100%;
-  padding: 4rem 0;
 }
 
 section#bio .bio-grid {
@@ -169,7 +169,6 @@ section#industry {
   display: block;
   width: 100%;
   background: rgba(231, 231, 231, 0.801);
-  padding: 4rem 0;
 }
 
 section#industry h2 {
@@ -180,9 +179,10 @@ section#industry .industry-grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-bottom: 4rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 5rem;
 }
 
 section#industry .industry-grid .industry-logo {
@@ -227,7 +227,6 @@ section#projects {
   display: block;
   width: 100%;
   background: white;
-  padding: 4rem 0;
 }
 
 section#projects h2 {
@@ -244,6 +243,12 @@ section#projects .container .project-grid {
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
   grid-column-gap: 5rem;
+}
+
+section#projects .container .project-grid #project-pictures {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 section#projects .container .project-grid #project-pictures img {
@@ -273,7 +278,6 @@ section#studies {
   display: block;
   width: 100%;
   background: #ebebeb;
-  padding: 4rem 0;
 }
 
 section#studies h2 {
@@ -306,6 +310,10 @@ section#studies .studies-grid #studies-picture img {
   border: 3px solid #2b2b2b;
 }
 
+section {
+  padding: 5rem 0;
+}
+
 footer {
   display: block;
   position: relative;
@@ -329,8 +337,17 @@ footer #footer-content .icon-container {
 
 @media (min-width: 1200px) {
   section#industry .industry-grid .industry-logo {
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+  h2 {
+    margin-bottom: 1em !important;
+  }
+  .container {
+    width: 60%;
+  }
+  section#projects .container {
+    width: 70%;
   }
 }
 
